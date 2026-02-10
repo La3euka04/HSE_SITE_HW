@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Я — студент ВШЭ (МИЭМ) | Главная</title>
+  <meta name="description" content="ДЗ-2: CSS для страниц из ДЗ-1. Тема: Я — студент ВШЭ (МИЭМ).">
+
+  <!-- Внешний CSS (обязательное) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Внутренний style (обязательное) -->
+  <style>
+  </style>
+</head>
+
+<body id="page-home">
+  <!-- position + псевдо-класс :focus -->
+  <a class="skip-link" href="#content">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container">
+      <p class="site-kicker">Учебный проект • ДЗ-2 (CSS)</p>
+
+      <!-- inline style (обязательное) -->
+      <h1 class="site-title" style="margin-top: 0; text-transform: uppercase;">
+        Я — студент ВШЭ (МИЭМ)
+      </h1>
+
+      <nav class="site-nav" aria-label="Навигация">
+        <ul>
+          <li><a href="index.html" aria-current="page">Главная</a></li>
+          <li><a href="feedback.html">Обратная связь</a></li>
+        </ul>
+      </nav>
+
+      <!-- inline style (обязательное) -->
+      <p class="muted local-note" style="margin-bottom: 0;">
+        На этой странице есть SVG
+      </p>
+    </div>
+  </header>
+
+  <main id="content" class="site-main">
+    <div class="container">
+
+      <section class="card" aria-labelledby="about">
+        <h2 id="about">Обо мне</h2>
+
+        <article>
+          <h3>Кратко</h3>
+
+          <p>
+            Я учусь в <strong>НИУ ВШЭ</strong>, факультет <strong>МИЭМ</strong>, <strong>4 курс</strong>.
+            Интересы: <em>ИИ</em>, <em>Data Science</em>, волейбол, хоккей, Формула-1, английский, авиация.
+          </p>
+
+          <p class="muted">
+            Примеры строчных тегов:
+            <abbr title="Искусственный интеллект">ИИ</abbr>,
+            <mark>семантика</mark>,
+            <code>HTML</code>,
+            <small>примечание</small>,
+            <time datetime="2026-02-01">01.02.2026</time>.
+          </p>
+
+          <blockquote class="quote">
+            <p></p>
+          </blockquote>
+
+          <details>
+            <summary>План на семестр</summary>
+            <ol class="nice-ol">
+              <li>закрыть учебные задачи</li>
+              <li>добавить проекты в портфолио</li>
+              <li>прокачать английский</li>
+            </ol>
+          </details>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="graphic">
+        <h2 id="graphic">Графическая информация</h2>
+
+        <!-- 1) SVG -->
+        <figure class="figure">
+          <svg class="banner" viewBox="0 0 900 220" role="img" aria-label="Баннер: Я — студент ВШЭ (МИЭМ)">
+            <rect x="0" y="0" width="900" height="220"></rect>
+            <circle cx="120" cy="110" r="60"></circle>
+            <circle cx="220" cy="110" r="40"></circle>
+            <circle cx="300" cy="110" r="28"></circle>
+            <text x="380" y="95">Я — студент ВШЭ</text>
+            <text x="380" y="140">МИЭМ • 4 курс • ИИ &amp; DS</text>
+          </svg>
+
+          <!-- inline style (обязательное) -->
+          <figcaption class="muted" style="padding-top: 6px;">
+          </figcaption>
+        </figure>
+
+        <!-- 2) Реальная картинка из файла + map/area -->
+        <h3>Фото (из файла) + кликабельные зоны (map/area)</h3>
+
+        <p class="muted">
+        </p>
+
+        <figure class="figure photo">
+          <img
+            src="img/miem.jpg"
+            alt="Фото МИЭМ / ВШЭ (файл img/miem.jpg)"
+            width="900"
+            usemap="#miemmap"
+          >
+          <figcaption class="muted">
+            Левая часть картинки — ссылка на форму, правая — прокрутка к интересам.
+          </figcaption>
+        </figure>
+
+        <map name="miemmap">
+          <!-- Координаты примерные: подойдут для ширины ~900px -->
+          <area shape="rect" coords="0,0,450,600" href="feedback.html" alt="Перейти на страницу обратной связи">
+          <area shape="rect" coords="450,0,900,600" href="#interests" alt="Перейти к интересам">
+        </map>
+
+        <!-- 3) picture/source/img (адаптивная картинка) -->
+        <h3>Picture (адаптивность)</h3>
+        <picture class="figure">
+          <source media="(min-width: 800px)" srcset="img/miem.jpg">
+          <!-- fallback: если файл не положить, тут тоже будет 404; это нормально. -->
+          <img src="img/miem.jpg" alt="Адаптивное изображение (используется picture)" width="900">
+        </picture>
+
+      </section>
+
+      <section class="grid">
+        <article class="card" aria-labelledby="interests">
+          <h2 id="interests">Интересы</h2>
+          <ul class="nice-ul">
+            <li><span class="tag">ИИ</span> и <span class="tag">DS</span></li>
+            <li><span class="tag">Волейбол</span>, <span class="tag">Хоккей</span></li>
+            <li><span class="tag">Формула-1</span></li>
+            <li><span class="tag">Английский</span></li>
+            <li><span class="tag">Авиация</span></li>
+          </ul>
+
+          <table class="table">
+            <caption class="muted">Профиль интересов</caption>
+            <thead>
+              <tr><th scope="col">Сфера</th><th scope="col">Примеры</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Учёба</td><td>ИИ, DS</td></tr>
+              <tr><td>Спорт</td><td>волейбол, хоккей</td></tr>
+              <tr><td>Хобби</td><td>Формула-1, авиация, английский</td></tr>
+            </tbody>
+          </table>
+        </article>
+
+        <aside class="card side" aria-label="Факт-блок">
+          <h2>Факт</h2>
+          <p>Это статический сайт. CSS подключён внешним файлом и частично задан через <code>&lt;style&gt;</code> и inline.</p>
+          <p class="muted">Проверь через DevTools → Network: <code>css/style.css</code> должен загружаться со статусом 200.</p>
+        </aside>
+      </section>
+
+      <section class="card" aria-labelledby="extra">
+        <h2 id="extra">Дополнительные теги (демо)</h2>
+
+        <h3>Canvas</h3>
+        <canvas id="c1" width="420" height="110">Ваш браузер не поддерживает canvas.</canvas>
+
+        <h3>Audio / Video</h3>
+        <audio controls>Ваш браузер не поддерживает audio.</audio>
+        <video controls width="420" height="240">Ваш браузер не поддерживает video.</video>
+
+        <h3>Embed / Object / Param</h3>
+        <embed class="embed-box" type="image/svg+xml" width="420" height="90"
+               src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='90'><rect width='420' height='90' fill='%23eef2ff'/><text x='16' y='55' font-size='18' fill='%231f2430'>embed: ВШЭ (МИЭМ)</text></svg>">
+
+        <object class="embed-box" data="data:image/svg+xml;utf8,
+          <svg xmlns='http://www.w3.org/2000/svg' width='420' height='90'>
+            <rect width='420' height='90' fill='%23f6f7fb'/>
+            <text x='16' y='55' font-size='18' fill='%231f2430'>object: студент ВШЭ</text>
+          </svg>" type="image/svg+xml" width="420" height="90">
+          <param name="name" value="miem-demo">
+          Ваш браузер не поддерживает object.
+        </object>
+
+        <h3>Script / Noscript</h3>
+        <p>Статус JS: <span id="js-status">не определён</span></p>
+        <noscript><p><strong>Noscript:</strong> JavaScript отключён.</p></noscript>
+
+        <div class="local-note muted">
+          <pre>
+ВШЭ (МИЭМ)
+Курс: 4
+Интересы: ИИ, DS, спорт, хобби
+          </pre>
+        </div>
+      </section>
+
+      <a class="to-top" href="#page-home" title="Наверх">↑</a>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <address>Контакт: <a href="mailto:student@example.com">pabobrikov@hse.edu.ru</a></address>
+      <p class="muted">© 2026 • ДЗ-2 (CSS)</p>
+    </div>
+  </footer>
+
+  <script>
+    // Демонстрация script + небольшой рисунок на canvas
+    var s = document.getElementById('js-status');
+    if (s) s.textContent = 'включён';
+
+    var c = document.getElementById('c1');
+    if (c && c.getContext) {
+      var ctx = c.getContext('2d');
+      ctx.fillStyle = '#eef2ff';
+      ctx.fillRect(0, 0, c.width, c.height);
+      ctx.fillStyle = '#1f2430';
+      ctx.font = '18px sans-serif';
+      ctx.fillText('Canvas: Я — студент ВШЭ (МИЭМ)', 16, 45);
+      ctx.fillText('CSS + HTML + базовый JS', 16, 75);
+    }
+  </script>
+</body>
+</html>

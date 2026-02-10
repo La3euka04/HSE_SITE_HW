@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Я — студент ВШЭ (МИЭМ) | Обратная связь</title>
+  <meta name="description" content="ДЗ-2: форма с различными полями и CSS требованиями.">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Внутренний style (обязательное) -->
+  <style>
+    .form-hint { background: #f7f7f7; padding: 10px; border-radius: 12px; }
+    .form-hint strong { text-decoration: underline; }
+  </style>
+</head>
+
+<body id="page-feedback">
+  <a class="skip-link" href="#content">Перейти к форме</a>
+
+  <header class="site-header">
+    <div class="container">
+      <p class="site-kicker">Учебный проект • ДЗ-2 (CSS)</p>
+
+      <!-- inline style (обязательное) -->
+      <h1 class="site-title" style="margin-top: 0; letter-spacing: 0.6px;">
+        Обратная связь
+      </h1>
+
+      <nav class="site-nav" aria-label="Навигация">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="feedback.html" aria-current="page">Обратная связь</a></li>
+        </ul>
+      </nav>
+
+      <p class="form-hint muted" style="margin-bottom: 0;">
+      </p>
+    </div>
+  </header>
+
+  <main id="content" class="site-main">
+    <div class="container">
+      <section class="card" aria-labelledby="form-title">
+        <h2 id="form-title">Форма</h2>
+
+        <form class="form" action="#" method="post">
+          <fieldset>
+            <legend>Контакты</legend>
+
+            <div class="field">
+              <label for="name">Имя *</label>
+              <input id="name" name="name" type="text" required minlength="2" maxlength="40" placeholder="Иван">
+              <small class="muted">Подсветка ошибок — через CSS :required:invalid</small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required placeholder="name@example.com">
+            </div>
+
+            <div class="field">
+              <label for="phone">Телефон</label>
+              <input id="phone" name="phone" type="tel" placeholder="+7...">
+            </div>
+
+            <div class="field">
+              <label for="faculty">Факультет</label>
+              <input id="faculty" name="faculty" type="text" value="МИЭМ" readonly>
+            </div>
+
+            <div class="field">
+              <label for="year">Курс</label>
+              <input id="year" name="year" type="number" min="1" max="6" value="4">
+            </div>
+
+            <div class="field">
+              <label for="date">Дата</label>
+              <input id="date" name="date" type="date">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Сообщение</legend>
+
+            <div class="field">
+              <label for="topic">Тема</label>
+              <select id="topic" name="topic">
+                <option value="ai" selected>ИИ / DS</option>
+                <option value="study">Учёба</option>
+                <option value="sport">Спорт</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Текст *</label>
+              <textarea id="message" name="message" rows="6" required placeholder="Напишите сообщение..."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="url">Ссылка</label>
+              <input id="url" name="url" type="url" placeholder="https://...">
+            </div>
+
+            <div class="field">
+              <label for="file">Файл</label>
+              <input id="file" name="file" type="file">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Интересы</legend>
+
+            <div class="field">
+              <p class="field-title">Отметьте интересы</p>
+              <label class="check"><input type="checkbox" name="interest" value="ai" checked> ИИ</label>
+              <label class="check"><input type="checkbox" name="interest" value="ds" checked> DS</label>
+              <label class="check"><input type="checkbox" name="interest" value="volleyball"> Волейбол</label>
+              <label class="check"><input type="checkbox" name="interest" value="hockey"> Хоккей</label>
+              <label class="check"><input type="checkbox" name="interest" value="f1"> Формула-1</label>
+              <label class="check"><input type="checkbox" name="interest" value="english"> Английский</label>
+              <label class="check"><input type="checkbox" name="interest" value="aviation"> Авиация</label>
+            </div>
+
+            <div class="field">
+              <p class="field-title">Способ связи</p>
+              <label class="check"><input type="radio" name="contact" value="email" checked> Email</label>
+              <label class="check"><input type="radio" name="contact" value="phone"> Телефон</label>
+            </div>
+
+            <div class="field">
+              <label for="rating">Оценка (1–10)</label>
+              <input id="rating" name="rating" type="range" min="1" max="10" value="7">
+            </div>
+
+            <div class="field">
+              <label for="color">Любимый цвет</label>
+              <input id="color" name="color" type="color">
+            </div>
+          </fieldset>
+
+          <div class="field consent">
+            <!-- inline style (обязательное) -->
+            <label style="display:inline-block; padding: 6px 0;">
+              <input type="checkbox" name="consent" required>
+              Согласен(на) на обработку данных *
+            </label>
+          </div>
+
+          <div class="actions">
+            <button type="submit">Отправить</button>
+            <button type="reset" class="secondary">Очистить</button>
+          </div>
+        </form>
+      </section>
+
+      <p class="muted"><a href="index.html">← Вернуться на главную</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="muted">© 2026 • ДЗ-2 (CSS)</p>
+    </div>
+  </footer>
+</body>
+</html>

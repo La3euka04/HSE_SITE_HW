@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Я — студент ВШЭ (МИЭМ) | Главная</title>
+  <meta name="description" content="ДЗ-1 HTML: 2 связанные статические страницы на тему Я — студент ВШЭ (МИЭМ).">
+</head>
+
+<body>
+  <!-- Семантическая структура страницы -->
+  <header>
+    <h1>Я — студент ВШЭ (МИЭМ)</h1>
+
+    <nav aria-label="Навигация">
+      <ul>
+        <li><a href="index.html" aria-current="page">Главная</a></li>
+        <li><a href="feedback.html">Обратная связь</a></li>
+      </ul>
+    </nav>
+
+    <hr>
+  </header>
+
+  <main>
+    <section aria-labelledby="about">
+      <h2 id="about">Обо мне</h2>
+
+      <article>
+        <header>
+          <h3>Краткая справка</h3>
+        </header>
+
+        <p>
+          Я учусь в <strong>НИУ ВШЭ</strong>, факультет <strong>МИЭМ</strong>, <strong>4 курс</strong>.
+          Интересы: <em>ИИ</em>, <em>Data Science</em>, волейбол, хоккей, Формула-1, английский, авиация.
+        </p>
+
+        <p>
+          Примеры строчных тегов:
+          <abbr title="Искусственный интеллект">ИИ</abbr>,
+          <mark>семантика</mark>,
+          <code>HTML</code>,
+          <small>примечание</small>,
+          <time datetime="2026-02-01">01.02.2026</time>.
+        </p>
+
+        <blockquote>
+          <p>Цель страницы — показать структуру и основные HTML-элементы без CSS.</p>
+        </blockquote>
+
+        <details>
+          <summary>План на семестр</summary>
+          <ol>
+            <li>закрыть учебные задачи</li>
+            <li>добавить проекты в портфолио</li>
+            <li>прокачать английский</li>
+          </ol>
+        </details>
+
+        <footer>
+          <p>Навигация и структура сделаны семантическими тегами.</p>
+        </footer>
+      </article>
+    </section>
+
+    <section aria-labelledby="graphic">
+      <h2 id="graphic">Графическая информация</h2>
+
+      <!-- 1) SVG (графика без файлов) -->
+      <figure>
+        <svg viewBox="0 0 900 220" role="img" aria-label="Баннер: Я — студент ВШЭ (МИЭМ)">
+          <rect x="0" y="0" width="900" height="220" fill="#f3f5ff"></rect>
+          <circle cx="120" cy="110" r="60" fill="#dfe4ff"></circle>
+          <circle cx="220" cy="110" r="40" fill="#dfe4ff"></circle>
+          <circle cx="300" cy="110" r="28" fill="#dfe4ff"></circle>
+          <text x="380" y="95" font-size="34" font-weight="700" fill="#1f2430">Я — студент ВШЭ</text>
+          <text x="380" y="140" font-size="22" font-weight="600" fill="#1f2430">МИЭМ • 4 курс • ИИ &amp; DS</text>
+        </svg>
+        <figcaption></figcaption>
+      </figure>
+
+      <!-- 2) img + map/area (кликабельные зоны) -->
+      <p></p>
+
+      <img
+        src="data:image/svg+xml;utf8,
+        <svg xmlns='http://www.w3.org/2000/svg' width='420' height='140'>
+          <rect width='420' height='140' fill='%23eef2ff'/>
+          <rect x='18' y='18' width='384' height='104' rx='14' fill='%23dfe4ff'/>
+          <text x='40' y='72' font-size='24' fill='%231f2430'>МИЭМ • ВШЭ</text>
+          <text x='40' y='105' font-size='16' fill='%231f2430'>нажми по левому блоку</text>
+        </svg>"
+        alt="Иллюстрация: МИЭМ ВШЭ"
+        width="420" height="140"
+        usemap="#miemmap">
+
+      <map name="miemmap">
+        <!-- Левая часть картинки ведёт на форму -->
+        <area shape="rect" coords="18,18,210,122" href="feedback.html" alt="Перейти на страницу обратной связи">
+        <!-- Правая часть картинки ведёт к разделу интересов -->
+        <area shape="rect" coords="210,18,402,122" href="#interests" alt="Перейти к интересам">
+      </map>
+
+      <!-- 3) picture/source/img (демо тега picture) -->
+      <p>Пример picture/source/img (адаптивная подмена через media):</p>
+      <picture>
+        <source media="(min-width: 700px)" srcset="data:image/svg+xml;utf8,
+          <svg xmlns='http://www.w3.org/2000/svg' width='700' height='120'>
+            <rect width='700' height='120' fill='%23f6f7fb'/>
+            <text x='20' y='70' font-size='26' fill='%231f2430'>Широкий экран: Я — студент ВШЭ (МИЭМ)</text>
+          </svg>">
+        <img
+          src="data:image/svg+xml;utf8,
+          <svg xmlns='http://www.w3.org/2000/svg' width='420' height='120'>
+            <rect width='420' height='120' fill='%23f6f7fb'/>
+            <text x='20' y='70' font-size='20' fill='%231f2430'>Мобильный: ВШЭ (МИЭМ)</text>
+          </svg>"
+          alt="Баннер: адаптивная картинка"
+          width="420" height="120">
+      </picture>
+    </section>
+
+    <section aria-labelledby="interests">
+      <h2 id="interests">Информация по теме (структурные теги)</h2>
+
+      <article>
+        <h3>Мои интересы</h3>
+        <ul>
+          <li>ИИ и Data Science</li>
+          <li>волейбол и хоккей</li>
+          <li>Формула-1</li>
+          <li>английский</li>
+          <li>авиация</li>
+        </ul>
+
+        <h3>Мини-таблица</h3>
+        <table>
+          <caption>Профиль интересов</caption>
+          <thead>
+            <tr>
+              <th scope="col">Сфера</th>
+              <th scope="col">Примеры</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Учёба</td>
+              <td>ИИ, DS</td>
+            </tr>
+            <tr>
+              <td>Спорт</td>
+              <td>волейбол, хоккей</td>
+            </tr>
+            <tr>
+              <td>Хобби</td>
+              <td>Формула-1, авиация, английский</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <aside>
+        <p>
+          <strong>Заметка:</strong> сайт состоит из 2 статических HTML-страниц, связанных ссылками в навигации.
+        </p>
+      </aside>
+    </section>
+
+    <section aria-labelledby="extra-tags">
+      <h2 id="extra-tags">Дополнительные теги (демо из лекций)</h2>
+
+      <!-- canvas -->
+      <h3>Canvas</h3>
+      <canvas width="360" height="90">
+        Ваш браузер не поддерживает canvas.
+      </canvas>
+
+      <!-- audio/video (без файлов — просто демонстрация тегов) -->
+      <h3>Audio / Video</h3>
+      <p>Демо тега audio (без источника):</p>
+      <audio controls>
+        Ваш браузер не поддерживает audio.
+      </audio>
+
+      <p>Демо тега video (без источника):</p>
+      <video controls width="360" height="200">
+        Ваш браузер не поддерживает video.
+      </video>
+
+      <!-- embed/object/param -->
+      <h3>Embed / Object / Param</h3>
+      <embed
+        type="image/svg+xml"
+        width="360" height="90"
+        src="data:image/svg+xml;utf8,
+        <svg xmlns='http://www.w3.org/2000/svg' width='360' height='90'>
+          <rect width='360' height='90' fill='%23eef2ff'/>
+          <text x='16' y='54' font-size='18' fill='%231f2430'>embed: ВШЭ (МИЭМ)</text>
+        </svg>">
+
+      <p>Object</p>
+      <object
+        data="data:image/svg+xml;utf8,
+        <svg xmlns='http://www.w3.org/2000/svg' width='360' height='90'>
+          <rect width='360' height='90' fill='%23f6f7fb'/>
+          <text x='16' y='54' font-size='18' fill='%231f2430'>object: студент ВШЭ</text>
+        </svg>"
+        type="image/svg+xml"
+        width="360" height="90">
+        <param name="name" value="miem-demo">
+        Ваш браузер не поддерживает object.
+      </object>
+
+      <!-- div (как контейнер), pre (форматированный текст) -->
+      <h3>Div / Pre</h3>
+      <div>
+        <p>Ниже пример форматированного блока:</p>
+        <pre>
+ВШЭ (МИЭМ)
+Курс: 4
+Интересы: ИИ, DS, спорт, хобби
+        </pre>
+      </div>
+
+      <!-- script/noscript -->
+      <h3>Script / Noscript</h3>
+      <p>Статус JS: <span id="js-status">не определён</span></p>
+      <noscript>
+        <p><strong>Noscript:</strong> JavaScript отключён.</p>
+      </noscript>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <address>Контакт: <a href="pabobrikov@hse.edu.ru">pabobrikov@hse.edu.ru</a></address>
+    <p>© 2026 • Учебный проект</p>
+  </footer>
+
+  <script>
+    // Минимальный скрипт: просто помечает, что JS включён (тег script из лекций)
+    var el = document.getElementById('js-status');
+    if (el) el.textContent = 'включён';
+  </script>
+</body>
+</html>

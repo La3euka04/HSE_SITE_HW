@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Навигатор по заданиям — Веб-программирование</title>
+  <meta name="description" content="Навигатор по ДЗ-1 и ДЗ-2 (HTML + CSS) на GitHub Pages.">
+
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: #0b0f1a; color: #e9eefc; }
+    header, main, footer { max-width: 920px; margin: 0 auto; padding: 18px; }
+    header { padding-top: 26px; }
+    .card { background: #121a2b; border: 1px solid #23304d; border-radius: 16px; padding: 16px; }
+    .grid { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
+    @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+    h1 { margin: 0 0 10px; font-size: 22px; }
+    p { margin: 8px 0; color: #cbd6f6; }
+    .btn {
+      display: inline-block; text-decoration: none; text-align: center;
+      padding: 10px 14px; border-radius: 12px;
+      border: 1px solid #2a3a5f; background: #182242; color: #e9eefc;
+      font-weight: 700;
+    }
+    .btn:hover { background: #1c2a53; }
+    .muted { color: #9fb1e6; font-size: 14px; }
+    code { background: #0e1527; padding: 2px 6px; border-radius: 8px; border: 1px solid #23304d; }
+    ul { margin: 8px 0 0; padding-left: 18px; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Навигатор по домашним заданиям</h1>
+    <p class="muted">Тема: «Я — студент ВШЭ (МИЭМ)» • 4 курс • ИИ/DS • опубликовано на GitHub Pages</p>
+  </header>
+
+  <main>
+    <section class="grid">
+      <article class="card">
+        <h2>ДЗ-1 (только HTML)</h2>
+        <p>Две связанные статические страницы: главная + форма обратной связи. Без CSS.</p>
+        <p>
+          <a class="btn" href="./hw1/" aria-label="Открыть домашнее задание 1 (HTML)">Открыть ДЗ-1</a>
+        </p>
+        <ul class="muted">
+          <li>Путь: <code>/hw1/</code></li>
+          <li>Файлы: <code>hw1/index.html</code>, <code>hw1/feedback.html</code></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>ДЗ-2 (HTML + CSS)</h2>
+        <p>Те же страницы, но доработаны CSS: селекторы, flexbox, position, @media, inline style, !important.</p>
+        <p>
+          <a class="btn" href="./hw2/" aria-label="Открыть домашнее задание 2 (CSS)">Открыть ДЗ-2</a>
+        </p>
+        <ul class="muted">
+          <li>Путь: <code>/hw2/</code></li>
+          <li>CSS: <code>hw2/css/style.css</code></li>
+          <li>Фото: <code>hw2/img/miem.jpg</code></li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="muted">
+    <p>Если преподавателю нужен отдельно ДЗ-1 и ДЗ-2 — даёшь две ссылки: <code>/hw1/</code> и <code>/hw2/</code>.</p>
+  </footer>
+</body>
+</html>
