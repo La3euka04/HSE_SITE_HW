@@ -224,3 +224,179 @@ button.secondary { background: #fff; }
   .site-title { font-size: 22px; }
   .to-top { right: 10px; bottom: 10px; }
 }
+
+:root { color-scheme: dark; }
+
+body {
+  color: rgba(255,255,255,.92);
+  background:
+    radial-gradient(900px 520px at 12% 0%, rgba(124,92,255,.30), transparent 60%),
+    radial-gradient(900px 520px at 88% 10%, rgba(34,197,94,.20), transparent 58%),
+    radial-gradient(900px 520px at 50% 100%, rgba(245,158,11,.10), transparent 62%),
+    linear-gradient(180deg, #060a12 0%, #0b1220 40%, #060a12 100%);
+}
+
+.container { max-width: 1100px; padding: 18px; }
+
+.site-header, .site-footer {
+  background: rgba(10,14,24,.55);
+  border-bottom-color: rgba(255,255,255,.10);
+}
+
+.site-footer {
+  border-top-color: rgba(255,255,255,.10);
+  border-bottom: none;
+}
+
+.site-kicker { color: rgba(255,255,255,.74); }
+.site-title { color: rgba(255,255,255,.96); letter-spacing: -0.6px; }
+
+.muted { color: rgba(255,255,255,.70) !important; }
+
+.site-nav a {
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.14);
+  color: rgba(255,255,255,.92);
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+
+.site-nav a[aria-current="page"] {
+  border-color: rgba(124,92,255,.70);
+  box-shadow: 0 0 0 4px rgba(124,92,255,.12);
+}
+
+.site-nav a:hover {
+  text-decoration: none;
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.20);
+  box-shadow: 0 12px 28px rgba(0,0,0,.22);
+}
+
+.site-nav a:focus {
+  outline-color: rgba(124,92,255,.90);
+}
+
+.site-main { padding: 22px 0 28px; }
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.045));
+  border-color: rgba(255,255,255,.14);
+  box-shadow: 0 18px 52px rgba(0,0,0,.34);
+  padding: 18px;
+  border-radius: 22px;
+}
+
+h2, h3 { color: rgba(255,255,255,.95); letter-spacing: -0.25px; }
+p { color: rgba(255,255,255,.86); }
+strong { color: rgba(255,255,255,.96); }
+
+code {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 10px;
+  padding: 2px 7px;
+  color: rgba(255,255,255,.92);
+}
+
+mark {
+  background: rgba(245,158,11,.18);
+  color: rgba(255,255,255,.92);
+  padding: 0 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(245,158,11,.22);
+}
+
+.quote {
+  border-left-color: rgba(124,92,255,.70);
+  background: rgba(124,92,255,.10);
+  border-radius: 16px;
+  padding: 12px 14px;
+}
+
+details {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  padding: 10px 12px;
+}
+
+summary { color: rgba(255,255,255,.92); }
+
+.tag {
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.14);
+  color: rgba(255,255,255,.90);
+  padding: 4px 12px;
+}
+
+.nice-ul li::marker { color: rgba(255,255,255,.88); }
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,.03);
+}
+
+.table thead th {
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.92);
+  padding: 10px 12px;
+}
+
+.table tbody td {
+  color: rgba(255,255,255,.86);
+  padding: 10px 12px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.table tbody tr:hover td {
+  background: rgba(255,255,255,.05);
+}
+
+.banner { border-radius: 18px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.02); }
+.banner rect { fill: rgba(255,255,255,.06); }
+.banner circle { fill: rgba(255,255,255,.14); }
+.banner text { fill: rgba(255,255,255,.96); }
+.banner text:last-of-type { fill: rgba(255,255,255,.88); }
+
+.photo img, picture img {
+  border-color: rgba(255,255,255,.14);
+  box-shadow: 0 16px 40px rgba(0,0,0,.28);
+}
+
+.embed-box {
+  border-color: rgba(255,255,255,.14);
+  background: rgba(255,255,255,.04);
+}
+
+audio, video, canvas, embed, object {
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+}
+
+.to-top {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.16);
+  color: rgba(255,255,255,.92);
+  box-shadow: 0 16px 44px rgba(0,0,0,.30);
+}
+
+.to-top:hover { transform: translateY(-1px); }
+
+.skip-link {
+  background: rgba(255,255,255,.92);
+  color: #1f2430;
+  border-color: rgba(0,0,0,.14);
+}
+
+@media (max-width: 760px) {
+  .container { padding: 14px; }
+  .card { padding: 16px; border-radius: 18px; }
+  .site-nav a { padding: 8px 12px; }
+}
