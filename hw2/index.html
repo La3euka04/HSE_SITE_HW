@@ -6,23 +6,25 @@
   <title>Я — студент ВШЭ (МИЭМ) | Главная</title>
   <meta name="description" content="ДЗ-2: CSS для страниц из ДЗ-1. Тема: Я — студент ВШЭ (МИЭМ).">
 
-  <!-- Внешний CSS (обязательное) -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Внутренний style (обязательное) -->
   <style>
+    body#page-home .site-header { position: sticky; top: 0; z-index: 10; }
+    body#page-home .site-header { backdrop-filter: blur(10px); }
+    .site-nav a { transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease, border-color .12s ease; }
+    .site-nav a:hover { transform: translateY(-1px); }
+    .card { transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease; }
+    .card:hover { transform: translateY(-1px); }
   </style>
 </head>
 
 <body id="page-home">
-  <!-- position + псевдо-класс :focus -->
   <a class="skip-link" href="#content">Перейти к содержимому</a>
 
   <header class="site-header">
     <div class="container">
       <p class="site-kicker">Учебный проект • ДЗ-2 (CSS)</p>
 
-      <!-- inline style (обязательное) -->
       <h1 class="site-title" style="margin-top: 0; text-transform: uppercase;">
         Я — студент ВШЭ (МИЭМ)
       </h1>
@@ -34,9 +36,8 @@
         </ul>
       </nav>
 
-      <!-- inline style (обязательное) -->
       <p class="muted local-note" style="margin-bottom: 0;">
-        На этой странице есть SVG
+        тестовая страница.
       </p>
     </div>
   </header>
@@ -53,19 +54,23 @@
           <p>
             Я учусь в <strong>НИУ ВШЭ</strong>, факультет <strong>МИЭМ</strong>, <strong>4 курс</strong>.
             Интересы: <em>ИИ</em>, <em>Data Science</em>, волейбол, хоккей, Формула-1, английский, авиация.
+            Для меня важны практические проекты, аккуратная реализация и понятная подача результата.
           </p>
 
           <p class="muted">
             Заметки про меня:
             <abbr title="Искусственный интеллект">ИИ</abbr>,
-            <mark>семантика</mark>,
+            <mark>семантика в задачах NLP</mark>,
             <code>HTML</code>,
             <small>примечание</small>,
             <time datetime="2026-02-01">01.02.2026</time>.
           </p>
 
           <blockquote class="quote">
-            <p></p>
+            <p>
+              ВШЭ — исследовательский университет с большим числом образовательных направлений и проектных форматов.
+              МИЭМ исторически ассоциируется с инженерной и математической подготовкой: на практике это означает много математики, программирования и аккуратной работы с деталями.
+            </p>
           </blockquote>
 
           <details>
@@ -82,7 +87,6 @@
       <section class="card" aria-labelledby="graphic">
         <h2 id="graphic">Графическая информация</h2>
 
-        <!-- 1) SVG -->
         <figure class="figure">
           <svg class="banner" viewBox="0 0 900 220" role="img" aria-label="Баннер: Я — студент ВШЭ (МИЭМ)">
             <rect x="0" y="0" width="900" height="220"></rect>
@@ -93,15 +97,14 @@
             <text x="380" y="140">МИЭМ • 4 курс • ИИ &amp; DS</text>
           </svg>
 
-          <!-- inline style (обязательное) -->
           <figcaption class="muted" style="padding-top: 6px;">
           </figcaption>
         </figure>
 
-        <!-- 2) Реальная картинка из файла + map/area -->
-        <h3>Фото + кликабельные зоны (map/area)</h3>
+        <h3>Фото</h3>
 
         <p class="muted">
+          На изображении настроены кликабельные области: левая часть ведёт на страницу формы, правая — к разделу интересов.
         </p>
 
         <figure class="figure photo">
@@ -117,16 +120,13 @@
         </figure>
 
         <map name="miemmap">
-          <!-- Координаты примерные: подойдут для ширины ~900px -->
           <area shape="rect" coords="0,0,450,600" href="feedback.html" alt="Перейти на страницу обратной связи">
           <area shape="rect" coords="450,0,900,600" href="#interests" alt="Перейти к интересам">
         </map>
 
-        <!-- 3) picture/source/img (адаптивная картинка) -->
         <h3>Picture (адаптивность)</h3>
         <picture class="figure">
           <source media="(min-width: 800px)" srcset="img/miem.jpg">
-          <!-- fallback: если файл не положить, тут тоже будет 404; это нормально. -->
           <img src="img/miem.jpg" alt="Адаптивное изображение (используется picture)" width="900">
         </picture>
 
@@ -159,12 +159,15 @@
         <aside class="card side" aria-label="Факт-блок">
           <h2>Факт</h2>
           <p>Это статический сайт. CSS подключён внешним файлом. Кроме этого данная работа необходима для демонстрации навыков владения основами web разработки<code>&lt;style&gt;</code> и inline.</p>
-          <p class="muted">Факт номер 2, столица Швейцарии не ясна до сихпор, скорее всего это Берн</p>
+          <p class="muted">
+            ВШЭ известна сильными образовательными треками и проектной культурой, а МИЭМ связан с инженерными направлениями и системной подготовкой.
+            Столица Швейцарии — Берн.
+          </p>
         </aside>
       </section>
 
       <section class="card" aria-labelledby="extra">
-        <h2 id="extra">Дополнительные теги </h2>
+        <h2 id="extra">Доп теги </h2>
 
         <h3>Canvas</h3>
         <canvas id="c1" width="420" height="110">Ваш браузер не поддерживает canvas.</canvas>
@@ -206,29 +209,41 @@
 
   <footer class="site-footer">
     <div class="container">
-      <address>Контакт: <a href="mailto:student@example.com">pabobrikov@hse.edu.ru</a></address>
+      <address>Контакт: <a href="mailto:pabobrikov@hse.edu.ru">pabobrikov@hse.edu.ru</a></address>
       <p class="muted">© 2026 • ДЗ-2 (CSS)</p>
     </div>
   </footer>
 
   <script>
-    // Демонстрация script + небольшой рисунок на canvas
     var s = document.getElementById('js-status');
     if (s) s.textContent = 'включён';
 
     var c = document.getElementById('c1');
     if (c && c.getContext) {
       var ctx = c.getContext('2d');
-      ctx.fillStyle = '#eef2ff';
-      ctx.fillRect(0, 0, c.width, c.height);
-      ctx.fillStyle = '#1f2430';
-      ctx.font = '18px sans-serif';
-      ctx.fillText('Canvas: Я — студент ВШЭ (МИЭМ)', 16, 45);
-      ctx.fillText('CSS + HTML + базовый JS', 16, 75);
+      var w = c.width, h = c.height;
+
+      ctx.clearRect(0, 0, w, h);
+
+      var g = ctx.createLinearGradient(0, 0, w, 0);
+      g.addColorStop(0, 'rgba(124,92,255,0.28)');
+      g.addColorStop(1, 'rgba(34,197,94,0.20)');
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, w, h);
+
+      ctx.strokeStyle = 'rgba(255,255,255,0.16)';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(0.5, 0.5, w - 1, h - 1);
+
+      ctx.fillStyle = 'rgba(255,255,255,0.92)';
+      ctx.font = '700 18px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif';
+      ctx.fillText('Canvas: Я — студент ВШЭ (МИЭМ)', 16, 44);
+
+      ctx.fillStyle = 'rgba(255,255,255,0.72)';
+      ctx.font = '14px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif';
+      ctx.fillText('HTML + CSS + базовый JS', 16, 72);
     }
   </script>
 </body>
 
 </html>
-
-
