@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Навигатор по заданиям — Веб-программирование</title>
-  <meta name="description" content="Навигатор по ДЗ-1 и ДЗ-2 (HTML + CSS) на GitHub Pages.">
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Навигатор по заданиям — Веб-программирование</title>
+<meta content="Навигатор по ДЗ-1, ДЗ-2 и ДЗ-3 (HTML + CSS + JS) на GitHub Pages." name="description"/>
+<style>
     body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: #0b0f1a; color: #e9eefc; }
     header, main, footer { max-width: 920px; margin: 0 auto; padding: 18px; }
     header { padding-top: 26px; }
@@ -27,45 +27,54 @@
     ul { margin: 8px 0 0; padding-left: 18px; }
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>Навигатор по домашним заданиям</h1>
-    <p class="muted">Тема: «Я — студент ВШЭ (МИЭМ)» • 4 курс • ИИ/DS • опубликовано на GitHub Pages</p>
-  </header>
+<header>
+<h1>Навигатор по домашним заданиям</h1>
+<p class="muted">Тема: «Я — студент ВШЭ (МИЭМ)» • 4 курс • ИИ/DS • опубликовано на GitHub Pages</p>
+</header>
+<main>
+<section class="grid">
+<article class="card">
+<h2>ДЗ-1 (только HTML)</h2>
+<p>Две связанные статические страницы: главная + форма обратной связи. Без CSS.</p>
+<p>
+<a aria-label="Открыть домашнее задание 1 (HTML)" class="btn" href="./hw1/index.html">Открыть ДЗ-1</a>
+</p>
+<ul class="muted">
+<li>Путь: <code>/hw1/</code></li>
+<li>Файлы: <code>hw1/index.html</code>, <code>hw1/feedback.html</code></li>
+</ul>
+</article>
+<article class="card">
+<h2>ДЗ-2 (HTML + CSS)</h2>
+<p>Те же страницы, но доработаны CSS: селекторы, flexbox, position, @media, inline style, !important.</p>
+<p>
+<a aria-label="Открыть домашнее задание 2 (CSS)" class="btn" href="./hw2/index.html">Открыть ДЗ-2</a>
+</p>
+<ul class="muted">
+<li>Путь: <code>/hw2/</code></li>
+<li>CSS: <code>hw2/css/style.css</code></li>
+<li>Фото: <code>hw2/img/miem.jpg</code></li>
+</ul>
+</article>
 
-  <main>
-    <section class="grid">
-      <article class="card">
-        <h2>ДЗ-1 (только HTML)</h2>
-        <p>Две связанные статические страницы: главная + форма обратной связи. Без CSS.</p>
-        <p>
-          <a class="btn" href="./hw1/" aria-label="Открыть домашнее задание 1 (HTML)">Открыть ДЗ-1</a>
-        </p>
-        <ul class="muted">
-          <li>Путь: <code>/hw1/</code></li>
-          <li>Файлы: <code>hw1/index.html</code>, <code>hw1/feedback.html</code></li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2>ДЗ-2 (HTML + CSS)</h2>
-        <p>Те же страницы, но доработаны CSS: селекторы, flexbox, position, @media, inline style, !important.</p>
-        <p>
-          <a class="btn" href="./hw2/" aria-label="Открыть домашнее задание 2 (CSS)">Открыть ДЗ-2</a>
-        </p>
-        <ul class="muted">
-          <li>Путь: <code>/hw2/</code></li>
-          <li>CSS: <code>hw2/css/style.css</code></li>
-          <li>Фото: <code>hw2/img/miem.jpg</code></li>
-        </ul>
-      </article>
-    </section>
-  </main>
-
-  <footer class="muted">
-    <p>
-  </footer>
+<article class="card">
+<h2>ДЗ-3 (JS + Leaflet)</h2>
+<p>Доработка персональной страницы: интерактивная карта (LeafletJS) и виртуальный чат с голосовыми сообщениями и автоответами по ключевым словам.</p>
+<p>
+<a aria-label="Открыть домашнее задание 3 (JS)" class="btn" href="./hw3/index.html">Открыть ДЗ-3</a>
+</p>
+<ul class="muted">
+<li>Путь: <code>/hw3/</code></li>
+<li>JS: <code>hw3/js/app.js</code></li>
+<li>CSS: <code>hw3/css/style.css</code></li>
+<li>Карта: LeafletJS + OpenStreetMap</li>
+</ul>
+</article>
+</section>
+</main>
+<footer class="muted">
+<p>
+</p></footer>
 </body>
-
 </html>
