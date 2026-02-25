@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Я — студент ВШЭ (МИЭМ) | ДЗ 3 </title>
+<meta content="ДЗ-3" name="description"/>
+<link href="css/style.css" rel="stylesheet"/><link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/>
+<style>
+    body#page-home .site-header { position: sticky; top: 0; z-index: 10; }
+    body#page-home .site-header { backdrop-filter: blur(10px); }
+    .site-nav a { transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease, border-color .12s ease; }
+    .site-nav a:hover { transform: translateY(-1px); }
+    .card { transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease; }
+    .card:hover { transform: translateY(-1px); }
+  </style>
+</head>
+<body id="page-home">
+<a class="skip-link" href="#content">Перейти к содержимому</a>
+<header class="site-header">
+      <a class="back-link" href="../index.html">← В меню</a>
+
+<div class="container">
+<p class="site-kicker">Учебный проект • ДЗ-3 </p>
+<h1 class="site-title" style="margin-top: 0; text-transform: uppercase;">
+        Я — студент ВШЭ (МИЭМ)
+      </h1>
+<nav aria-label="Навигация" class="site-nav">
+<ul>
+<li><a aria-current="page" href="index.html">Главная</a></li>
+<li><a href="feedback.html">Обратная связь</a></li>
+</ul>
+</nav>
+<p class="muted local-note" style="margin-bottom: 0;">ДЗ-3: карта + виртуальный чат</p>
+</div>
+</header>
+<main class="site-main" id="content">
+<div class="container">
+<section aria-labelledby="about" class="card">
+<h2 id="about">Обо мне</h2>
+<article>
+<h3>Кратко</h3>
+<p>
+            Я учусь в <strong>НИУ ВШЭ</strong>, факультет <strong>МИЭМ</strong>, <strong>4 курс</strong>.
+            Интересы: <em>ИИ</em>, <em>Data Science</em>, волейбол, хоккей, Формула-1, английский, авиация.
+            Для меня важны практические проекты, аккуратная реализация и понятная подача результата.
+          </p>
+<p class="muted">
+            Заметки про меня:
+            <abbr title="Искусственный интеллект">ИИ</abbr>,
+            <mark>семантика в задачах NLP</mark>,
+            <code>HTML</code>,
+            <small>примечание</small>,
+            <time datetime="2026-02-01">01.03.2026</time>.
+          </p>
+<blockquote class="quote">
+<p>
+              ВШЭ — исследовательский университет с большим числом образовательных направлений и проектных форматов.
+              МИЭМ исторически ассоциируется с инженерной и математической подготовкой: на практике это означает много математики, программирования и аккуратной работы с деталями. Тут учился Мавроди
+            </p>
+</blockquote>
+<details>
+<summary>План на семестр</summary>
+<ol class="nice-ol">
+<li>закрыть учебные задачи</li>
+<li>добавить проекты в портфолио</li>
+<li>прокачать английский</li>
+</ol>
+</details>
+</article>
+</section>
+<section aria-labelledby="graphic" class="card">
+<h2 id="graphic">Графическая информация</h2>
+<figure class="figure">
+<svg aria-label="Баннер: Я — студент ВШЭ (МИЭМ)" class="banner" role="img" viewbox="0 0 900 220">
+<rect height="220" width="900" x="0" y="0"></rect>
+<circle cx="120" cy="110" r="60"></circle>
+<circle cx="220" cy="110" r="40"></circle>
+<circle cx="300" cy="110" r="28"></circle>
+<text x="380" y="95">Я — студент ВШЭ</text>
+<text x="380" y="140">МИЭМ • 4 курс • ИИ &amp; DS</text>
+</svg>
+<figcaption class="muted" style="padding-top: 6px;">
+</figcaption>
+</figure>
+<h3>Фото</h3>
+<p class="muted">
+          На изображении настроены кликабельные области: левая часть ведёт на страницу формы, правая — к разделу интересов.
+        </p>
+<figure class="figure photo">
+<img alt="Фото МИЭМ / ВШЭ (файл img/miem.jpg)" src="img/miem.jpg" usemap="#miemmap" width="900"/>
+<figcaption class="muted">
+            Левая часть картинки — ссылка на форму, правая — прокрутка к интересам.
+          </figcaption>
+</figure>
+<map name="miemmap">
+<area alt="Перейти на страницу обратной связи" coords="0,0,450,600" href="feedback.html" shape="rect"/>
+<area alt="Перейти к интересам" coords="450,0,900,600" href="#interests" shape="rect"/>
+</map>
+<h3>Picture</h3>
+<picture class="figure">
+<source media="(min-width: 800px)" srcset="img/miem.jpg"/>
+<img alt="Адаптивное изображение (используется picture)" src="img/miem.jpg" width="900"/>
+</picture>
+</section>
+<section class="grid">
+<article aria-labelledby="interests" class="card">
+<h2 id="interests">Интересы</h2>
+<ul class="nice-ul">
+<li><span class="tag">ИИ</span> и <span class="tag">DS</span></li>
+<li><span class="tag">Волейбол</span>, <span class="tag">Хоккей</span></li>
+<li><span class="tag">Формула-1</span></li>
+<li><span class="tag">Английский</span></li>
+<li><span class="tag">Авиация</span></li>
+</ul>
+<table class="table">
+<caption class="muted">Профиль интересов</caption>
+<thead>
+<tr><th scope="col">Сфера</th><th scope="col">Примеры</th></tr>
+</thead>
+<tbody>
+<tr><td>Учёба</td><td>ИИ, DS</td></tr>
+<tr><td>Спорт</td><td>волейбол, хоккей</td></tr>
+<tr><td>Хобби</td><td>Формула-1, авиация, английский</td></tr>
+</tbody>
+</table>
+</article>
+<aside aria-label="Факт-блок" class="card side">
+<h2>Факт</h2>
+<p>Это статический сайт. CSS подключён внешним файлом. Кроме этого данная работа необходима для демонстрации навыков владения основами web разработки</p>
+<p class="muted">
+            ВШЭ известна сильными образовательными треками и проектной культурой, а МИЭМ связан с инженерными направлениями и системной подготовкой.
+            Столица Швейцарии — Берн, хотя про это много споров и трудно понять так ли это.
+          </p>
+</aside>
+</section>
+
+<section aria-labelledby="map-title" class="card">
+<h2 id="map-title">Интерактивная карта</h2>
+<p class="muted">
+    Карта сделана через <strong>LeafletJS</strong>
+    Можно быстро перейти к МИЭМ, центру Москвы или определить текущую геопозицию, однако в этом случае надо разрешение браузера.
+  </p>
+<div class="map-wrap">
+<div aria-label="Карта" class="map" id="map"></div>
+<div aria-label="Управление картой" class="map-actions">
+<button class="ui-btn" id="map-btn-miem" type="button">МИЭМ (Таллинская 34)</button>
+<button class="ui-btn" id="map-btn-center" type="button">Центр Москвы</button>
+<button class="ui-btn" id="map-btn-me" type="button">Моя геопозиция</button>
+</div>
+<p class="muted" id="map-status" style="margin: 8px 0 0;"></p>
+</div>
+</section>
+<section aria-labelledby="chat-title" class="card">
+<h2 id="chat-title">Виртуальный чат с автором</h2>
+<p class="muted">
+    Чат, с возможностью озвучки ответов
+    Поддерживаются текстовые и голосовые сообщения.
+  </p>
+<div class="chat" id="chat">
+<div aria-label="Сообщения" aria-live="polite" class="chat-log" id="chat-log"></div>
+<form autocomplete="off" class="chat-form" id="chat-form">
+<label class="sr-only" for="chat-input">Сообщение</label>
+<input id="chat-input" maxlength="300" name="message" placeholder="Напишите сообщение..." required="" type="text"/>
+<button class="ui-btn ui-btn--primary" id="chat-send" type="submit">Отправить</button>
+<button aria-pressed="false" class="ui-btn" id="chat-voice" type="button">🎤 Голос</button>
+<button class="ui-btn ui-btn--danger" id="chatClear" type="button">
+  Очистить чат
+</button>
+</form>
+<div class="chat-options">
+        <label class="ui-check"><input id="chat-tts" type="checkbox"/> Озвучивать ответы</label>
+      </div>
+      <p class="muted" id="chat-status" style="margin: 8px 0 0;"></p>
+<p class="muted" style="margin: 6px 0 0;">
+      Ключевые слова для автоответов: <code>привет</code>, <code>вшэ</code>, <code>миэм</code>, <code>ии</code>, <code>спорт</code>, <code>почта</code> и многие другие например.
+    </p>
+</div>
+</section>
+<section aria-labelledby="extra" class="card">
+<h2 id="extra">Доп теги </h2>
+<h3>Canvas</h3>
+<canvas height="110" id="c1" width="420">Ваш браузер не поддерживает canvas.</canvas>
+<h3>Audio / Video</h3>
+<audio controls="">Ваш браузер не поддерживает audio.</audio>
+<video controls="" height="240" width="420">Ваш браузер не поддерживает video.</video>
+<h3>Эмбеды, обьекты, параметры для тестирования и проверик на работоспособность</h3>
+<embed class="embed-box" height="90" src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='420' height='90'&gt;&lt;rect width='420' height='90' fill='%23eef2ff'/&gt;&lt;text x='16' y='55' font-size='18' fill='%231f2430'&gt;embed: ВШЭ (МИЭМ)&lt;/text&gt;&lt;/svg&gt;" type="image/svg+xml" width="420"/>
+<object class="embed-box" data="data:image/svg+xml;utf8,
+          &lt;svg xmlns='http://www.w3.org/2000/svg' width='420' height='90'&gt;
+            &lt;rect width='420' height='90' fill='%23f6f7fb'/&gt;
+            &lt;text x='16' y='55' font-size='18' fill='%231f2430'&gt;object: студент ВШЭ&lt;/text&gt;
+          &lt;/svg&gt;" height="90" type="image/svg+xml" width="420">
+<param name="name" value="miem-demo"/>
+          Ваш браузер не поддерживает object.
+        </object>
+<h3>Script / Noscript</h3>
+<p>Статус JS: <span id="js-status">не определён</span></p>
+<noscript><p><strong>Noscript:</strong> JavaScript отключён.</p></noscript>
+<div class="local-note muted">
+<pre>
+ВШЭ (МИЭМ)
+Курс: 4
+Интересы: ИИ, DS, спорт, хобби
+          </pre>
+</div>
+</section>
+<a class="to-top" href="#page-home" title="Наверх">↑</a>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container">
+<address>Контакт: <a href="mailto:pabobrikov@hse.edu.ru">pabobrikov@hse.edu.ru</a></address>
+<p class="muted">© 2026 • ДЗ-3 (JS)</p>
+</div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="js/app.js"></script></body>
+</html>
